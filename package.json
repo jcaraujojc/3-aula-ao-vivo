@@ -1,0 +1,24 @@
+{
+  "name": "3-aula-ao-vivo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcaraujojc/3-aula-ao-vivo.git"
+  },
+  "author": "João Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcaraujojc/3-aula-ao-vivo/issues"
+  },
+  "homepage": "https://github.com/jcaraujojc/3-aula-ao-vivo#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
