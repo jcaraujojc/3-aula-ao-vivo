@@ -19,6 +19,17 @@ function cadastrarUsuario(requisicao, resposta){
 
     if(nome && sobrenome && usuario && cidade && estado && cep)
     {
+        listaUsuarios.push({
+            nome: nome,
+            sobrenome: sobrenome,
+            usuario: usuario,
+            cidade: cidade,
+            estado: estado,
+            cep: cep
+        });
+    }
+    else
+    {
         resposta.write(`<!DOCTYPE html>
         <html lang="pt-br">
         
@@ -54,12 +65,13 @@ function cadastrarUsuario(requisicao, resposta){
         if(nome == "")
             {
                 resposta.write(`
+                </div>
                         <div class="container alert alert-danger" role="alert">
                          Por favor informe o nome do usuário.
                          </div>`);
             }
         resposta.write(` 
-                     </div>
+                     
                 <div class="col-md-4">
                     <label for="sobrenome" class="form-label">Sobrenome:</label>
                     <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>`
@@ -173,17 +185,7 @@ function cadastrarUsuario(requisicao, resposta){
 </html>
         `);
      
-    }
-    else
-    {
-        listaUsuarios.push({
-            nome: nome,
-            sobrenome: sobrenome,
-            usuario: usuario,
-            cidade: cidade,
-            estado: estado,
-            cep: cep
-        });
+
         resposta.end();
     } 
 }
