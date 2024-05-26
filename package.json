@@ -1,7 +1,7 @@
 {
   "name": "3-aula-ao-vivo",
   "version": "1.0.0",
-  "description": "",
+  "description": "WEB APP HTPP POST",
   "main": "index.js",
   "type": "module",
   "scripts": {

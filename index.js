@@ -19,17 +19,6 @@ function cadastrarUsuario(requisicao, resposta){
 
     if(nome && sobrenome && usuario && cidade && estado && cep)
     {
-        listaUsuarios.push({
-            nome: nome,
-            sobrenome: sobrenome,
-            usuario: usuario,
-            cidade: cidade,
-            estado: estado,
-            cep: cep
-        });
-    }
-    else
-    {
         resposta.write(`<!DOCTYPE html>
         <html lang="pt-br">
         
@@ -65,7 +54,7 @@ function cadastrarUsuario(requisicao, resposta){
         if(nome == "")
             {
                 resposta.write(`
-                        <div class="alert alert-danger" role="alert">
+                        <div class="container alert alert-danger" role="alert">
                          Por favor informe o nome do usuário.
                          </div>`);
             }
@@ -183,8 +172,20 @@ function cadastrarUsuario(requisicao, resposta){
     crossorigin="anonymous"></script>
 </html>
         `);
-    resposta.end();
+     
     }
+    else
+    {
+        listaUsuarios.push({
+            nome: nome,
+            sobrenome: sobrenome,
+            usuario: usuario,
+            cidade: cidade,
+            estado: estado,
+            cep: cep
+        });
+        resposta.end();
+    } 
 }
 
 app.post('/cadastrarUsuario', cadastrarUsuario);
