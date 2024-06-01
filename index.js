@@ -173,6 +173,7 @@ function cadastrarUsuario(requisicao, resposta) {
 }
 
 
+
 app.post('/cadastrarUsuario', cadastrarUsuario);
 
 app.listen(porta, host, () => {

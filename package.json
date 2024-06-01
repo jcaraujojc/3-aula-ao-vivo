@@ -20,5 +20,6 @@
   "homepage": "https://github.com/jcaraujojc/3-aula-ao-vivo#readme",
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "devDependencies": {}
 }
